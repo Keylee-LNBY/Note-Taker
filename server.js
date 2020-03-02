@@ -30,7 +30,7 @@ app.get("/api/notes", function (req,res) {
 // and then return the new note to the client.
 app.post("/api/notes", function (req,res) {
     data.push(req.body);
-    fs.writeFile("./json/db.json", JSON.stringify(data), function(err) {
+    fs.writeFile("./db/db.json", JSON.stringify(data), function(err) {
         if(err) throw err;
         console.log("Post Saved");
     });
